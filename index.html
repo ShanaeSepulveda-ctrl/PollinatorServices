@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pollinator Services LLC | Turnkey Corporate ESG Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -15,20 +15,20 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
-                        corporate: {
-                            slate: '#1E293B',
-                            dark: '#0F172A',
-                            light: '#F8FAFC',
-                            border: '#E2E8F0'
+                        earth: {
+                            50: '#FBFaf9',
+                            100: '#F4F4F0',
+                            800: '#2C352D',
+                            900: '#1F2620'
                         },
                         eco: {
-                            green: '#15803D',
-                            light: '#DCFCE7',
-                            hover: '#166534'
+                            green: '#2F5233',
+                            light: '#E8EFE9',
+                            hover: '#244027'
                         },
                         honey: {
-                            main: '#F59E0B',
-                            light: '#FEF3C7'
+                            main: '#D4AF37',
+                            light: '#FDF8E8'
                         }
                     }
                 }
@@ -36,226 +36,271 @@
         }
     </script>
     <style>
-        /* Custom subtle animations */
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        body {
+            background-color: #FBFaf9;
+            color: #2C352D;
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        /* Soft, elegant image styling */
+        .img-elegant {
+            box-shadow: 0 20px 40px -10px rgba(44, 53, 45, 0.15);
         }
-        /* Botanical Theme Additions */
-        .pattern-botanical {
-            background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83-4.14 4.142A16.92 16.92 0 0153.25 10c0 9.389-7.611 17-17 17a16.92 16.92 0 01-4.968-1.933l-4.14 4.14A16.92 16.92 0 0129.075 34c0 9.389-7.611 17-17 17a16.92 16.92 0 01-4.968-1.933l-4.142 4.14-1.66-1.66 4.14-4.142A16.92 16.92 0 013.525 43c0-9.389 7.611-17 17-17a16.92 16.92 0 014.968 1.933l4.14-4.14A16.92 16.92 0 0127.701 19c0-9.389 7.611-17 17-17a16.92 16.92 0 014.968 1.933l4.142-4.14-2.184-2.184zM20.525 41C11.954 41 4.525 33.611 4.525 25A15.96 15.96 0 019 16.516V36.5a1 1 0 001 1h19.984A15.96 15.96 0 0120.525 41zM44.7 19C36.13 19 28.7 11.611 28.7 3a15.96 15.96 0 014.475-8.484V14.5a1 1 0 001 1h19.984A15.96 15.96 0 0144.7 19z' fill='%2315803D' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+        /* Custom FAQ Accordion Styling */
+        details > summary {
+            list-style: none;
         }
-        .pattern-botanical-dark {
-            background-color: #1E293B;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83-4.14 4.142A16.92 16.92 0 0153.25 10c0 9.389-7.611 17-17 17a16.92 16.92 0 01-4.968-1.933l-4.14 4.14A16.92 16.92 0 0129.075 34c0 9.389-7.611 17-17 17a16.92 16.92 0 01-4.968-1.933l-4.142 4.14-1.66-1.66 4.14-4.142A16.92 16.92 0 013.525 43c0-9.389 7.611-17 17-17a16.92 16.92 0 014.968 1.933l4.14-4.14A16.92 16.92 0 0127.701 19c0-9.389 7.611-17 17-17a16.92 16.92 0 014.968 1.933l4.142-4.14-2.184-2.184zM20.525 41C11.954 41 4.525 33.611 4.525 25A15.96 15.96 0 019 16.516V36.5a1 1 0 001 1h19.984A15.96 15.96 0 0120.525 41zM44.7 19C36.13 19 28.7 11.611 28.7 3a15.96 15.96 0 014.475-8.484V14.5a1 1 0 001 1h19.984A15.96 15.96 0 0144.7 19z' fill='%23166534' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+        details > summary::-webkit-details-marker {
+            display: none;
         }
-        .sunlight-glow {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(254,243,199,0.4) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            top: -200px;
-            left: -200px;
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
         }
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
         }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-            100% { transform: translateY(0px); }
+        /* Soft botanical background graphic */
+        .bg-botanical {
+            background-color: #FBFaf9;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232F5233' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
     </style>
 </head>
-<body class="text-gray-800 antialiased bg-corporate-light">
+<body class="bg-botanical antialiased text-earth-800">
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b-4 border-eco-green">
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-eco-green/10 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
                 <span class="text-3xl">🌻</span>
-                <span class="font-bold text-xl md:text-2xl tracking-tight text-corporate-slate">Pollinator Services</span>
+                <span class="font-serif font-bold text-xl md:text-2xl tracking-tight text-earth-900">Pollinator Services</span>
             </div>
-            <!-- Links to Google Form -->
-            <a href="https://forms.gle/PpDuGwtFJtStx5Vu8" target="_blank" rel="noopener noreferrer" class="bg-eco-green text-white px-5 py-2.5 rounded-lg font-semibold shadow hover:bg-eco-hover transition duration-200 text-sm md:text-base">
+            
+            <!-- Desktop Menu Links -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-earth-800">
+                <a href="#services" class="hover:text-honey-main transition duration-200">How It Works</a>
+                <a href="#faq" class="hover:text-honey-main transition duration-200">FAQ</a>
+                <a href="#founder" class="hover:text-honey-main transition duration-200">Meet the Founder</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://forms.gle/PpDuGwtFJtStx5Vu8" target="_blank" rel="noopener noreferrer" class="bg-eco-green text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:bg-eco-hover hover:shadow-lg transition duration-300 text-sm md:text-base border border-eco-green/20">
                 Request Site Audit
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative bg-corporate-dark text-white overflow-hidden">
-        <!-- Verbatim background image applied here -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-overlay" style="background-image: url('Shot-of-a-butterfly-on-a-cluster-of-purple-flowers-showcasing-four-season-pollinator-garden_2.JPG');"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-corporate-dark via-corporate-slate/90 to-transparent"></div>
-        
-        <!-- Decorative Floating Butterfly -->
-        <div class="absolute top-1/4 right-10 md:right-32 opacity-30 float-animation pointer-events-none hidden md:block">
-            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C12 22 11 18 7 15C3 12 2 8 4 5C6 2 10 4 12 8C14 4 18 2 20 5C22 8 21 12 17 15C13 18 12 22 12 22Z" fill="#F59E0B"/>
-            </svg>
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-earth-900">
+        <!-- Background Image with elegant overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="Shot-of-a-butterfly-on-a-cluster-of-purple-flowers-showcasing-four-season-pollinator-garden_2.jpg" alt="Beautiful pollinator garden" class="w-full h-full object-cover opacity-50 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-t from-earth-900 via-earth-900/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-earth-900 via-earth-900/80 to-transparent"></div>
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:w-2/3">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-honey-main/20 border border-honey-main/40 text-honey-light font-semibold tracking-wide text-xs md:text-sm mb-6 backdrop-blur-sm">
-                    Commercial Property Solutions
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-honey-main/20 border border-honey-main/30 text-honey-light font-medium tracking-wide text-xs md:text-sm mb-6 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-honey-main animate-pulse"></span>
+                    Premium Commercial Landscaping Solutions
                 </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white tracking-tight">
-                    Hit Your Corporate ESG Goals Without Lifting a Finger.
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 text-white tracking-tight">
+                    Bring life, beauty, and purpose back to your corporate spaces.
                 </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-                    We design, install, and maintain turnkey Native Pollinator Habitats for commercial real estate, office parks, and corporate campuses in the Greater Denver Area. Elevate your tenant experience while championing local ecology.
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-light">
+                    We design, install, and maintain turnkey Native Pollinator Habitats for commercial real estate in the Greater Denver Area. Elevate your tenant wellness while seamlessly hitting your ESG goals.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <!-- Links to Google Form -->
-                    <a href="https://forms.gle/PpDuGwtFJtStx5Vu8" target="_blank" rel="noopener noreferrer" class="bg-eco-green text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:bg-eco-hover transition duration-200 text-center text-lg">
-                        Request a Free Site Walkthrough
+                    <a href="https://forms.gle/PpDuGwtFJtStx5Vu8" target="_blank" rel="noopener noreferrer" class="bg-honey-main text-earth-900 px-8 py-4 rounded-full font-bold shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:bg-yellow-400 transition duration-300 text-center text-lg">
+                        Request a Free Walkthrough
                     </a>
-                    <a href="#services" class="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-lg font-bold hover:bg-white/20 transition duration-200 text-center text-lg backdrop-blur-sm">
-                        How It Works
+                    <a href="#services" class="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-medium hover:bg-white/20 transition duration-300 text-center text-lg backdrop-blur-md">
+                        Explore the Program
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- The Problem/Solution Section -->
-    <section class="py-24 relative overflow-hidden pattern-botanical">
-        <!-- Soft sunlight glow -->
-        <div class="sunlight-glow"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- The Mission / Problem Solution -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-corporate-slate mb-6 tracking-tight">Modern Tenants Demand Green Spaces.</h2>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Today's top-tier corporate tenants are prioritizing employee wellness and environmental sustainability. Standard concrete courtyards and sterile landscaping no longer cut it. 
+                    <h2 class="font-serif text-3xl md:text-5xl font-bold text-earth-900 mb-6 leading-tight">Modern tenants demand more than just concrete.</h2>
+                    <p class="text-lg text-earth-800/80 mb-6 leading-relaxed">
+                        Today's top-tier corporate tenants are prioritizing employee wellness and environmental sustainability. Sterile courtyards and standard grass no longer cut it. 
                     </p>
-                    <p class="text-lg text-corporate-slate leading-relaxed font-semibold border-l-4 border-eco-green pl-6 py-2 bg-corporate-light rounded-r-lg">
-                        Pollinator Services LLC transforms standard commercial landscaping into buzzing, eco-friendly assets. We provide the environmental PR and tenant joy, while your grounds crew does zero extra work.
-                    </p>
+                    <div class="border-l-4 border-honey-main pl-6 py-2">
+                        <p class="text-xl text-earth-900 leading-relaxed font-serif italic">
+                            "We provide the environmental PR and tenant joy, while your grounds crew does zero extra work."
+                        </p>
+                    </div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-corporate-light p-8 rounded-2xl border border-corporate-border card-hover">
-                        <div class="text-4xl mb-4 text-eco-green">📈</div>
-                        <h4 class="text-xl font-bold text-corporate-slate mb-2">ESG Compliance</h4>
-                        <p class="text-gray-600">Measurable, localized ecological impact perfect for corporate sustainability reports and investor relations.</p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-earth-100 hover:shadow-xl transition-all duration-300">
+                        <div class="w-14 h-14 bg-eco-light rounded-2xl flex items-center justify-center text-2xl mb-6">🌿</div>
+                        <h4 class="font-serif text-xl font-bold text-earth-900 mb-3">ESG Compliance</h4>
+                        <p class="text-earth-800/70 leading-relaxed text-sm">Measurable, localized ecological impact perfect for corporate sustainability reports and green initiatives.</p>
                     </div>
-                    <div class="bg-corporate-light p-8 rounded-2xl border border-corporate-border card-hover lg:translate-y-8">
-                        <div class="text-4xl mb-4 text-eco-green">🏢</div>
-                        <h4 class="text-xl font-bold text-corporate-slate mb-2">Tenant Retention</h4>
-                        <p class="text-gray-600">Create beautiful, relaxing nature immersion stations for employee lunch breaks and mental health moments.</p>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-earth-100 hover:shadow-xl transition-all duration-300 sm:translate-y-8">
+                        <div class="w-14 h-14 bg-honey-light rounded-2xl flex items-center justify-center text-2xl mb-6">🦋</div>
+                        <h4 class="font-serif text-xl font-bold text-earth-900 mb-3">Tenant Wellness</h4>
+                        <p class="text-earth-800/70 leading-relaxed text-sm">Create beautiful, relaxing nature immersion stations for employee mental health moments and lunch breaks.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services (Subscription Model) -->
-    <section id="services" class="py-24 bg-corporate-slate text-white relative pattern-botanical-dark">
-        <!-- Subtle Ethereal Glows -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-eco-green/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 md:mb-20">
-                <span class="text-honey-main font-bold tracking-widest uppercase text-sm mb-4 block">Zero Liability. Zero Hassle.</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">The Turnkey Pollinator Initiative</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg">A seamless, B2B subscription service designed specifically for commercial property management. We handle everything.</p>
+    <!-- Services (Turnkey Program) -->
+    <section id="services" class="py-24 bg-earth-100/50 border-y border-earth-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <span class="text-eco-green font-bold tracking-widest uppercase text-sm mb-4 block">Zero Liability. Zero Hassle.</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-earth-900">The Turnkey Pollinator Initiative</h2>
+                <p class="text-earth-800/70 max-w-2xl mx-auto text-lg">A seamless, B2B subscription service designed specifically for commercial property management. We handle everything from soil to bloom.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-                <!-- Connecting Line (Desktop only) -->
-                <div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-gray-700 z-0"></div>
-
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Step 1 -->
-                <div class="bg-corporate-dark p-8 rounded-2xl border border-gray-700 relative z-10 card-hover">
-                    <div class="w-20 h-20 bg-honey-main text-corporate-dark hexagon flex items-center justify-center font-black text-3xl mb-8 shadow-[0_0_20px_rgba(245,158,11,0.3)] mx-auto md:mx-0">1</div>
-                    <h3 class="text-2xl font-bold mb-4 text-center md:text-left">Custom Installation</h3>
-                    <p class="text-gray-400 leading-relaxed text-center md:text-left">We install aesthetic, professional-grade pollinator stations, bird baths with mosquito-preventative Bti, and safe, hypoallergenic native plants directly into your existing courtyard beds.</p>
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-earth-50 relative group">
+                    <div class="absolute top-0 right-0 p-8 text-8xl font-serif text-earth-50 group-hover:text-honey-light transition-colors duration-300 pointer-events-none">1</div>
+                    <div class="relative z-10">
+                        <h3 class="font-serif text-2xl font-bold mb-4 text-earth-900">Custom Installation</h3>
+                        <p class="text-earth-800/70 leading-relaxed">We install aesthetic, professional-grade pollinator stations, bird baths with mosquito-preventative Bti, and safe, hypoallergenic native plants directly into your existing courtyard beds.</p>
+                    </div>
                 </div>
                 <!-- Step 2 -->
-                <div class="bg-corporate-dark p-8 rounded-2xl border border-gray-700 relative z-10 card-hover">
-                    <div class="w-20 h-20 bg-honey-main text-corporate-dark hexagon flex items-center justify-center font-black text-3xl mb-8 shadow-[0_0_20px_rgba(245,158,11,0.3)] mx-auto md:mx-0">2</div>
-                    <h3 class="text-2xl font-bold mb-4 text-center md:text-left">Monthly Maintenance</h3>
-                    <p class="text-gray-400 leading-relaxed text-center md:text-left">Your staff is busy. We return monthly to deep-clean stations, refill premium no-mess seed (zero walkway debris), and prune the habitats so they remain pristine and liability-free.</p>
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-earth-50 relative group">
+                    <div class="absolute top-0 right-0 p-8 text-8xl font-serif text-earth-50 group-hover:text-honey-light transition-colors duration-300 pointer-events-none">2</div>
+                    <div class="relative z-10">
+                        <h3 class="font-serif text-2xl font-bold mb-4 text-earth-900">Monthly Maintenance</h3>
+                        <p class="text-earth-800/70 leading-relaxed">Your staff is busy. We return monthly to deep-clean stations, refill premium no-mess seed (zero walkway debris), and expertly prune the habitats so they remain pristine and liability-free.</p>
+                    </div>
                 </div>
                 <!-- Step 3 -->
-                <div class="bg-corporate-dark p-8 rounded-2xl border border-gray-700 relative z-10 card-hover">
-                    <div class="w-20 h-20 bg-honey-main text-corporate-dark hexagon flex items-center justify-center font-black text-3xl mb-8 shadow-[0_0_20px_rgba(245,158,11,0.3)] mx-auto md:mx-0">3</div>
-                    <h3 class="text-2xl font-bold mb-4 text-center md:text-left">Corporate PR & Reporting</h3>
-                    <p class="text-gray-400 leading-relaxed text-center md:text-left">You receive a "Certified Pollinator Habitat" plaque for your courtyard, and quarterly impact metrics to seamlessly include in your corporate ESG and sustainability newsletters.</p>
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 border border-earth-50 relative group">
+                    <div class="absolute top-0 right-0 p-8 text-8xl font-serif text-earth-50 group-hover:text-honey-light transition-colors duration-300 pointer-events-none">3</div>
+                    <div class="relative z-10">
+                        <h3 class="font-serif text-2xl font-bold mb-4 text-earth-900">Corporate PR</h3>
+                        <p class="text-earth-800/70 leading-relaxed">You receive a beautiful "Certified Pollinator Habitat" plaque for your courtyard, plus quarterly ecological impact metrics to seamlessly include in your corporate sustainability newsletters.</p>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-earth-900 mb-6">Frequently Asked Questions</h2>
+                <p class="text-earth-800/70 text-lg">Everything property managers need to know.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-white rounded-2xl shadow-sm border border-earth-100 overflow-hidden cursor-pointer">
+                    <summary class="flex justify-between items-center font-serif font-bold text-xl p-6 text-earth-900 hover:text-eco-green transition-colors">
+                        Will this create more work for my landscaping crew?
+                        <span class="transition group-open:rotate-180 text-honey-main text-2xl">↓</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-earth-800/70 leading-relaxed border-t border-earth-50">
+                        Not at all. Pollinator Services LLC is a completely turnkey vendor. We handle the design, installation, and the ongoing monthly maintenance, cleaning, and refilling. Your grounds crew can focus on the lawns and sidewalks while we manage the delicate ecology.
+                    </div>
+                </details>
+                
+                <!-- FAQ 2 -->
+                <details class="group bg-white rounded-2xl shadow-sm border border-earth-100 overflow-hidden cursor-pointer">
+                    <summary class="flex justify-between items-center font-serif font-bold text-xl p-6 text-earth-900 hover:text-eco-green transition-colors">
+                        Will bird baths attract mosquitoes to our courtyards?
+                        <span class="transition group-open:rotate-180 text-honey-main text-2xl">↓</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-earth-800/70 leading-relaxed border-t border-earth-50">
+                        No. We utilize Bti (Bacillus thuringiensis israelensis) in all of our water features. This is a naturally occurring, eco-friendly bacteria that is 100% safe for birds, pets, and humans, but strictly prevents mosquito larvae from surviving. Your courtyards remain bite-free.
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group bg-white rounded-2xl shadow-sm border border-earth-100 overflow-hidden cursor-pointer">
+                    <summary class="flex justify-between items-center font-serif font-bold text-xl p-6 text-earth-900 hover:text-eco-green transition-colors">
+                        Are bird seed stations messy and a slipping hazard?
+                        <span class="transition group-open:rotate-180 text-honey-main text-2xl">↓</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-earth-800/70 leading-relaxed border-t border-earth-50">
+                        We completely understand the aesthetic and safety requirements of commercial properties. We strictly use premium, "no-mess" shelled seed blends that leave zero shell debris on your walkways. Furthermore, stations are strategically placed over soil beds to ensure walkways remain immaculate.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
 
     <!-- Founder / About -->
-    <section class="py-24 relative overflow-hidden pattern-botanical">
-        <!-- Decorative organic glows -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-honey-main/10 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-eco-green/10 blur-3xl"></div>
+    <section id="founder" class="py-24 bg-earth-900 text-earth-50 relative overflow-hidden">
+        <!-- Decorative subtle glows -->
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-eco-green/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-honey-main/10 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-corporate-border">
-                <div class="grid grid-cols-1 lg:grid-cols-12">
-                    
-                    <!-- Founder Image - CHECK YOUR EXACT FILE EXTENSION (.JPG vs .JPG) IN GITHUB -->
-                    <div class="lg:col-span-5 relative h-96 lg:h-auto bg-gray-100">
-                        <img src="founder.JPG" alt="Shanae Sepulveda - Founder" class="absolute inset-0 w-full h-full object-cover object-top shadow-inner">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Founder Image with URL Encoded space in the filename -->
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden img-elegant relative border-4 border-earth-800/50">
+                        <!-- USING URL ENCODED EXACT FILE NAME -->
+                        <img src="shanae.jpg" alt="Shanae Sepulveda - Founder" class="absolute inset-0 w-full h-full object-cover">
                     </div>
-
-                    <!-- Empowering Bio Content -->
-                    <div class="lg:col-span-7 p-10 md:p-14 flex flex-col justify-center">
-                        <span class="text-honey-main font-bold tracking-widest uppercase text-sm mb-4">Meet The Founder</span>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                After years in the corporate sector, I realized how much we all crave a connection to nature during the workday—and how much wasted potential lies in standard commercial landscaping.
-                            </p>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                I founded Pollinator Services LLC to bridge the gap between commercial real estate and local ecology. I believe that corporate campuses can be beautiful and professional, while actively using their land for good. 
-                            </p>
-                            <p class="font-semibold text-corporate-slate leading-relaxed text-lg border-l-4 border-honey-main pl-4">
-                                My mission is to empower property managers to transform everyday concrete spaces into thriving, sustainable habitats that bring joy to tenants and life back to our earth.
-                            </p>
-                        </div>
-
-                        <div class="mt-8 pt-8 border-t border-gray-100 mx-10 md:mx-14 mb-10">
-                            <p class="text-corporate-slate font-bold text-xl">Shanae Sepulveda</p>
-                            <p class="text-gray-500 text-sm">Founder & CEO, Pollinator Services LLC</p>
-                            <p class="text-eco-green text-sm font-medium mt-1">Locally owned and operated, serving the Greater Denver Area.</p>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Bio Content -->
+                <div class="lg:col-span-7 lg:pl-10">
+                    <span class="text-honey-main font-bold tracking-widest uppercase text-sm mb-4 block">Meet The Founder</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">Using land for good, sustainable reasons.</h2>
+                    
+                    <div class="space-y-6 text-earth-100/80 text-lg font-light leading-relaxed">
+                        <p>
+                            After years in the corporate sector, I realized how much we all crave a connection to nature during the workday—and how much wasted potential lies in standard, sterile commercial landscaping.
+                        </p>
+                        <p>
+                            Founded by Shanae Sepulveda, Pollinator Services LLC was built to bridge the gap between commercial real estate and local ecology. I believe that corporate campuses can be beautiful, professional, and environmentally impactful all at once.
+                        </p>
+                        <p class="font-serif text-2xl text-honey-light italic leading-relaxed pt-4">
+                            "My mission is to empower property managers to transform everyday concrete spaces into thriving, sustainable habitats that bring joy to tenants and life back to our earth."
+                        </p>
+                    </div>
+
+                    <div class="mt-10 pt-8 border-t border-earth-800">
+                        <p class="font-serif text-2xl font-bold text-white">Shanae Sepulveda</p>
+                        <p class="text-honey-main font-medium mt-1">Founder & CEO, Pollinator Services LLC</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer / Contact -->
-    <footer class="bg-corporate-slate py-16 border-t-8 border-eco-green text-center">
+    <footer class="bg-earth-100 py-16 border-t-8 border-eco-green text-center">
         <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 tracking-tight">Ready to upgrade your property's green footprint?</h2>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-earth-900 mb-8 tracking-tight">Ready to upgrade your property's green footprint?</h2>
             
-            <!-- Link to Google Form -->
-            <a href="https://forms.gle/PpDuGwtFJtStx5Vu8" target="_blank" rel="noopener noreferrer" class="inline-block bg-eco-green text-white px-10 py-4 rounded-lg font-bold shadow-xl hover:bg-eco-hover transition duration-300 mb-12 text-lg transform hover:-translate-y-1">
+            <a href="https://forms.gle/PpDuGwtFJtStx5Vu8" target="_blank" rel="noopener noreferrer" class="inline-block bg-eco-green text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-eco-hover transition duration-300 mb-12 text-lg transform hover:-translate-y-1">
                 Request Your Free Site Walkthrough
             </a>
             
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+            <div class="border-t border-earth-800/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-earth-800/60 font-medium">
                 <div class="flex items-center gap-2 mb-4 md:mb-0">
-                    <span>🌻</span>
-                    <span class="font-semibold text-gray-300">Pollinator Services LLC</span>
+                    <span class="text-xl">🌻</span>
+                    <span class="font-bold text-earth-900">Pollinator Services LLC</span>
                 </div>
-                <p>Servicing the Greater Denver Area and all surrounding commercial districts.</p>
+                <p>Proudly servicing the Greater Denver Area and all surrounding commercial districts.</p>
                 <p class="mt-4 md:mt-0">© 2026 All rights reserved.</p>
+            </div>
+            
+            <!-- Link back to Founder section as requested -->
+            <div class="mt-8 text-xs">
+                <a href="#founder" class="text-eco-green hover:underline">Read the Founder's Story</a>
             </div>
         </div>
     </footer>
