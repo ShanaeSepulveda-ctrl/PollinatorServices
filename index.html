@@ -44,12 +44,25 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        /* Pollinator Theme Additions */
-        .hexagon {
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        /* Botanical Theme Additions */
+        .pattern-botanical {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83-4.14 4.142A16.92 16.92 0 0153.25 10c0 9.389-7.611 17-17 17a16.92 16.92 0 01-4.968-1.933l-4.14 4.14A16.92 16.92 0 0129.075 34c0 9.389-7.611 17-17 17a16.92 16.92 0 01-4.968-1.933l-4.142 4.14-1.66-1.66 4.14-4.142A16.92 16.92 0 013.525 43c0-9.389 7.611-17 17-17a16.92 16.92 0 014.968 1.933l4.14-4.14A16.92 16.92 0 0127.701 19c0-9.389 7.611-17 17-17a16.92 16.92 0 014.968 1.933l4.142-4.14-2.184-2.184zM20.525 41C11.954 41 4.525 33.611 4.525 25A15.96 15.96 0 019 16.516V36.5a1 1 0 001 1h19.984A15.96 15.96 0 0120.525 41zM44.7 19C36.13 19 28.7 11.611 28.7 3a15.96 15.96 0 014.475-8.484V14.5a1 1 0 001 1h19.984A15.96 15.96 0 0144.7 19z' fill='%2315803D' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
-        .pattern-honeycomb {
-            background-image: url("data:image/svg+xml,%3Csvg width='40' height='69' viewBox='0 0 40 69' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 34.5c0-1.28.32-2.5 1-3.62L10 13.5c.66-1.12 1.83-1.8 3.12-1.8h13.76c1.29 0 2.46.68 3.12 1.8l9 17.38c.68 1.12 1 2.34 1 3.62 0 1.28-.32 2.5-1 3.62l-9 17.38c-.66 1.12-1.83 1.8-3.12 1.8H13.12c-1.29 0-2.46-.68-3.12-1.8l-9-17.38C.32 37 .01 35.78 0 34.5zm19.98-29.2c-1.29 0-2.46.68-3.12 1.8L7.86 24.5c-.68 1.12-1 2.34-1 3.62 0 1.28.32 2.5 1 3.62l9 17.38c.66 1.12 1.83 1.8 3.12 1.8h13.76c1.29 0 2.46-.68 3.12-1.8l9-17.38c.68-1.12 1-2.34 1-3.62 0-1.28-.32-2.5-1-3.62l-9-17.38c-.66-1.12-1.83-1.8-3.12-1.8H19.98z' fill='%23F59E0B' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+        .pattern-botanical-dark {
+            background-color: #1E293B;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83-4.14 4.142A16.92 16.92 0 0153.25 10c0 9.389-7.611 17-17 17a16.92 16.92 0 01-4.968-1.933l-4.14 4.14A16.92 16.92 0 0129.075 34c0 9.389-7.611 17-17 17a16.92 16.92 0 01-4.968-1.933l-4.142 4.14-1.66-1.66 4.14-4.142A16.92 16.92 0 013.525 43c0-9.389 7.611-17 17-17a16.92 16.92 0 014.968 1.933l4.14-4.14A16.92 16.92 0 0127.701 19c0-9.389 7.611-17 17-17a16.92 16.92 0 014.968 1.933l4.142-4.14-2.184-2.184zM20.525 41C11.954 41 4.525 33.611 4.525 25A15.96 15.96 0 019 16.516V36.5a1 1 0 001 1h19.984A15.96 15.96 0 0120.525 41zM44.7 19C36.13 19 28.7 11.611 28.7 3a15.96 15.96 0 014.475-8.484V14.5a1 1 0 001 1h19.984A15.96 15.96 0 0144.7 19z' fill='%23166534' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .sunlight-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(254,243,199,0.4) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            top: -200px;
+            left: -200px;
         }
         .float-animation {
             animation: float 6s ease-in-out infinite;
@@ -80,7 +93,7 @@
     <!-- Hero Section -->
     <header class="relative bg-corporate-dark text-white overflow-hidden">
         <!-- Verbatim background image applied here -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-overlay" style="background-image: url('Shot-of-a-butterfly-on-a-cluster-of-purple-flowers-showcasing-four-season-pollinator-garden_2.jpg');"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-overlay" style="background-image: url('Shot-of-a-butterfly-on-a-cluster-of-purple-flowers-showcasing-four-season-pollinator-garden_2.JPG');"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-corporate-dark via-corporate-slate/90 to-transparent"></div>
         
         <!-- Decorative Floating Butterfly -->
@@ -115,7 +128,10 @@
     </header>
 
     <!-- The Problem/Solution Section -->
-    <section class="py-24 bg-white relative pattern-honeycomb">
+    <section class="py-24 relative overflow-hidden pattern-botanical">
+        <!-- Soft sunlight glow -->
+        <div class="sunlight-glow"></div>
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -144,10 +160,11 @@
     </section>
 
     <!-- Services (Subscription Model) -->
-    <section id="services" class="py-24 bg-corporate-slate text-white relative">
-        <!-- Subtle Honeycomb Overlay -->
-        <div class="absolute inset-0 opacity-10 pattern-honeycomb mix-blend-overlay pointer-events-none"></div>
-        
+    <section id="services" class="py-24 bg-corporate-slate text-white relative pattern-botanical-dark">
+        <!-- Subtle Ethereal Glows -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-eco-green/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl pointer-events-none"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 md:mb-20">
                 <span class="text-honey-main font-bold tracking-widest uppercase text-sm mb-4 block">Zero Liability. Zero Hassle.</span>
@@ -182,18 +199,18 @@
     </section>
 
     <!-- Founder / About -->
-    <section class="py-24 bg-corporate-light relative overflow-hidden pattern-honeycomb">
-        <!-- Decorative background element -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-honey-main/10 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-900/5 blur-3xl"></div>
+    <section class="py-24 relative overflow-hidden pattern-botanical">
+        <!-- Decorative organic glows -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-honey-main/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-eco-green/10 blur-3xl"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-corporate-border">
+            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-corporate-border">
                 <div class="grid grid-cols-1 lg:grid-cols-12">
                     
-                    <!-- Founder Image -->
-                    <div class="lg:col-span-5 relative h-80 lg:h-auto bg-gray-200">
-                        <img src="founder.jpg" alt="Shanae Sepulveda - Founder" class="absolute inset-0 w-full h-full object-cover object-top">
+                    <!-- Founder Image - CHECK YOUR EXACT FILE EXTENSION (.JPG vs .JPG) IN GITHUB -->
+                    <div class="lg:col-span-5 relative h-96 lg:h-auto bg-gray-100">
+                        <img src="founder.JPG" alt="Shanae Sepulveda - Founder" class="absolute inset-0 w-full h-full object-cover object-top shadow-inner">
                     </div>
 
                     <!-- Empowering Bio Content -->
